@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+// font
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+
+	$header-height: 3rem;
+	$body-font: 'Nunito', sans-serif;
+
+	$base-color: #EE3E3E;
+	$light-color: #D0D0D0;
+	$dark-color: #2D2D2D;
+
+	$z-index-tooltip: 10;
+	$z-index-fixed: 100;
+	$z-index-modal: 1000;
+
+
+// reset default styles html
+*
+{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html
+{
+	scroll-behavior: smooth;
+}
+
+body
+{
+	font-family: $body-font;
+}
+
+ul
+{
+	list-style: none;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+img
+{
+	max-width: 100%;
+	height: auto;
+}
