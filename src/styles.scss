@@ -3,16 +3,17 @@
 
 
 	$header-height: 3rem;
+	$header-font-size: 1.25rem;
 	$body-font: 'Nunito', sans-serif;
 
 	$base-color: #EE3E3E;
-	$light-color: #D0D0D0;
+	$light-color: #fff;
 	$dark-color: #2D2D2D;
 
 	$z-index-tooltip: 10;
 	$z-index-fixed: 100;
 	$z-index-modal: 1000;
-
+	$body-container: 83.333333%;
 
 // reset default styles html
 *
@@ -30,6 +31,7 @@ html
 body
 {
 	font-family: $body-font;
+	background-color: $light-color;
 }
 
 ul
@@ -46,4 +48,36 @@ img
 {
 	max-width: 100%;
 	height: auto;
+}
+
+header
+{
+	height: $header-height;
+	width: 	$body-container;
+	margin: 0 auto;
+	font-size: $header-font-size;
+}
+
+.nav-bar
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: $header-height;
+}
+
+.nav-bar .nav-menu
+{
+	width: 40%;
+}
+.nav-bar .logo
+{
+	width: 60%;
+}
+
+.nav-list
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
