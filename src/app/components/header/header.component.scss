@@ -30,7 +30,6 @@ header
 	font-size: 1.1rem;
 }
 
-//hover
 .nav-toggle:hover,
 .nav-title:hover
 {
@@ -58,7 +57,7 @@ header
 	color: var(--first-color);
 }
 
-.uil //icons
+.uil //header icons
 {
 	font-size: 1.2rem;
 }
@@ -66,7 +65,7 @@ header
 .nav-close
 {
 	position: absolute;
-	right: 9%;
+	right: 8.5%;
 	bottom: .5rem;
 	font-size: 1.5rem;
 	cursor: pointer;

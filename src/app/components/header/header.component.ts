@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit
 		this.initHeaderComponents()
 	}
 
+	/**Inicializa os itens do header */
 	initHeaderComponents()
 	{
 		this.navMenu = document.getElementById('nav-menu');
@@ -27,18 +28,21 @@ export class HeaderComponent implements OnInit
 		this.navLinkItems = document.querySelectorAll('.nav-link');
 	}
 
+	/**Exibe o menu para dispositivos mobiles */
 	navToggleShowMenu()
 	{
 		this.navMenu.classList.add('show-menu');
 	}
 
+	/**Oculta o menu para dispositivos mobiles */
 	navToggleCloseMenu()
 	{
 		this.navMenu.classList.remove('show-menu');
 	}
 
+	/**Quando clicar em um dos itens do menu, oculta o menu em dipositivei moveis*/
 	navLinkClick()
 	{
-		this.navToggleCloseMenu()
+		this.navToggleCloseMenu();
 	}
 }
