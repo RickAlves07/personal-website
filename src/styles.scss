@@ -1,41 +1,31 @@
 // font
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
 
-	//INIT- global variables
-	//body
-	$body-font: 'Nunito', sans-serif;
-	$body-container: 83.333333%;
-
-	// global header-height
-	$header-height: 3rem;
-	$header-font-size: 1.25rem;
-
-	//global base color
-	$base-color: 0; //red base (0, 84%, 59%)
-	$light-color: 0; //white base (0, 0%, 100%)
-	$dark-color: 0; //black base (0, 0%, 18%)
-	//END - global variables
 :root
 {
 	//body
-	--body-font: $body-font;
-	--body-container: $body-container;
+	--body-font: 'Nunito', sans-serif;
+	--body-container: 83.333333%;
 
-	//header height
-	--header-height: $header-height;
-	--header-font-size: $header-font-size;
+	//header
+	--header-height: 3rem;
+	--header-font-size: 1.25rem;
 
 	//colors
-	--first-color: hsl($base-color, 84%, 59%);
-	--second-color: hsl($base-color, 69%, 61%);
-	--first-color-alt: hsl($base-color, 57%, 53%);
-	--first-color-lighter: hsl($base-color, 92%, 85%);
-	--title-color: hsl($base-color, 8%, 15%);
-	--text-color: hsl($base-color, 8%, 45%);
-	--text-color-light: hsl($base-color, 8%, 65%);
-	--input-color: hsl($base-color, 70%, 96%);
-	--body-color: hsl($base-color, 60%, 99%);
-	--container-color: hsl($base-color, 0%, 100%);
+	--base-color: 0; //red base (0, 84%, 59%)
+	--light-color: 0; //white base (0, 0%, 100%)
+	--dark-color: 0; //black base (0, 0%, 18%)
+
+	--first-color: hsl(var(--base-color), 84%, 59%);
+	--second-color: hsl(var(--base-color), 69%, 61%);
+	--first-color-alt: hsl(var(--base-color), 57%, 53%);
+	--first-color-lighter: hsl(var(--base-color), 92%, 85%);
+	--title-color: hsl(var(--base-color), 8%, 15%);
+	--text-color: hsl(var(--base-color), 8%, 45%);
+	--text-color-light: hsl(var(--base-color), 8%, 65%);
+	--input-color: hsl(var(--base-color), 70%, 96%);
+	--body-color: hsl(var(--base-color), 60%, 99%);
+	--container-color: hsl(var(--base-color), 0%, 100%);
 
 	//font-sizes
 	//default
@@ -58,35 +48,20 @@
 	--z-index-modal: 1000;
 }
 
-@media screen and (min-width: 968px)
-{
-	:root
-	{
-		--big-font-size: 3rem;
-		--h1-font-size: 2.25rem;
-		--h2-font-size: 1.5rem;
-		--h3-font-size: 1.25rem;
-		--normal-font-size: 1.2rem;
-		--small-font-size: .1rem;
-		--smaller-font-size: .9rem;
-	}
-}
-
 //INIT - Config
 body
 {
-	font-family: $body-font;
+	font-family: var(--body-font);
 	font-size: var(--normal-font-size);
 	background-color: var(--body-color);
 	color: var(--text-color);
-	margin: 0, 0, var(--header-height), 0;
+	margin: 0 0 var(--header-height) 0;
 }
 
 .container
 {
-	max-width: $body-container;
-	margin-right: 1.5rem;
-	margin-left: 1.5rem;
+	max-width: var(--body-container);
+	margin: 0 auto;
 }
 
 .grid
@@ -138,18 +113,61 @@ html
 	scroll-behavior: smooth;
 }
 
-ul
+ul, li
 {
 	list-style: none;
 }
 
-a
+a,
+a:-webkit-any-link
 {
 	text-decoration: none;
+	color: var(--title-color);
+}
+
+a:hover,
+a:-webkit-any-link:hover
+{
+	color: var(--first-color);
 }
 
 img
 {
 	max-width: 100%;
 	height: auto;
+}
+
+$width-1: 968px;
+$width-2: 767px;
+
+//media screen globals
+@media screen and (min-width: $width-1)
+{
+	:root
+	{
+		--big-font-size: 3rem;
+		--h1-font-size: 2.25rem;
+		--h2-font-size: 1.5rem;
+		--h3-font-size: 1.25rem;
+		--normal-font-size: 1.2rem;
+		--small-font-size: .1rem;
+		--smaller-font-size: .9rem;
+	}
+}
+
+//nav-menu
+@media screen and (max-width: $width-2)
+{
+	.nav-menu
+	{
+		position: fixed;
+		bottom: -100%;
+		left: 0;
+		width: 100%;
+		background-color: var(--body-color);
+		padding: 2rem 1.5rem 4rem;
+		box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+		border-radius: 1.5rem 1.5rem 0 0;
+		transition: .3s;
+	}
 }

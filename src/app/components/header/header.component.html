@@ -1,47 +1,51 @@
-<header>
-	<nav class="nav-bar">
-		<div class="logo">
+<header class="header" id="header">
+	<nav class="nav container">
+
+		<div class="nav-title">
 			<a href="#">Rick Alves</a>
 		</div>
-		<div class="nav-menu">
-			<ul class="nav-list">
+
+		<div class="nav-menu" id="nav-menu">
+			<ul class="nav-list grid">
 				<li class="nav-item">
-					<a  href="#home">
-						<!-- <i class="uil uil-estate"></i> -->
+					<a class="nav-link" href="#home"(click)='navLinkClick()' >
+						<i class="uil uil-estate"></i>
 						<span>Home</span>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a  href="#about">
-						<!-- <i class="uil uil-user"></i> -->
+					<a class="nav-link"  href="#about" (click)='navLinkClick()'>
+						 <i class="uil uil-user"></i>
 						<span>Sobre</span>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a  href="#xp">
-						<!-- <i class="uil uil-briefcase-alt"></i> -->
+					<a class="nav-link" href="#experience" (click)='navLinkClick()'>
+						 <i class="uil uil-briefcase-alt"></i>
 						<span>Experiência</span>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a  href="#portfolio">
-						<!-- <i class="uil uil-file-alt"></i> -->
+					<a class="nav-link"  href="#portfolio" (click)='navLinkClick()'>
+						 <i class="uil uil-file-alt"></i>
 						<span>Portfolio</span>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a  href="#contact">
-						<!-- <i class="uil uil-message"></i> -->
+					<a class="nav-link"  href="#contact" (click)='navLinkClick()'>
+						 <i class="uil uil-message"></i>
 						<span>Contato</span>
 					</a>
 				</li>
 			</ul>
-			<!-- <div  class="nav-close" id="nav-close">
+			<div  class="nav-close" id="nav-close" (click)='navToggleCloseMenu()'>
 				<i class="uil uil-times"></i>
-			</div> -->
+			</div>
 		</div>
-		<!-- <div class="nav-toogle" id="nav-toogle">
-			<i class="uil uil-bars"></i>
-		</div> -->
+		<div class="nav-buttons" >
+			<div class="nav-toggle" id="nav-toggle" (click)='navToggleShowMenu()'>
+				<i class="uil uil-bars"></i>
+			</div>
+		</div>
 	</nav>
 </header>
