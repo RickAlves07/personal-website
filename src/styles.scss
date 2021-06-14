@@ -171,3 +171,23 @@ $width-2: 767px;
 		transition: .3s;
 	}
 }
+
+#mask-pic
+{
+	clip-path: url("#svg-mask-hexag");
+	overflow: hidden;
+	background-color: var(--first-color);
+	display: block;
+	width: 300px;
+	height: 342.62px;
+	// width: 87.5%;
+	// height: 100%;
+	transform: rotate(20deg);
+}
+
+.masks-hidden
+{
+	width: 0px;
+	height: 0px;
+	position: absolute;
+}
