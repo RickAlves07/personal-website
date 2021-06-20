@@ -1,9 +1,19 @@
-
-
+.home-photo
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .img-profile
 {
-	transform: rotate(-20deg);
-	position: relative;
-	top: 1.7rem;
-	left: 1.1rem;
+	padding-top: 3.6em;
+	padding-left: 1em;
+	animation: spinPhoto 30s linear infinite;
+}
+
+@keyframes spinPhoto
+{ 100%
+	{
+		transform: rotate(-360deg);
+	}
 }
