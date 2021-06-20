@@ -180,12 +180,17 @@ $width-2: 767px;
 	display: block;
 	width: 300px;
 	height: 342.62px;
-	// width: 87.5%;
-	// height: 100%;
-	transform: rotate(20deg);
+	animation: spin 30s linear infinite;
 }
 
-.masks-hidden
+@keyframes spin
+{ 100%
+	{
+		transform:rotate(360deg);
+	}
+}
+
+.hidden
 {
 	width: 0px;
 	height: 0px;
