@@ -137,11 +137,19 @@ img
 	height: auto;
 }
 
-$width-1: 968px;
-$width-2: 767px;
+button
+{
+	cursor: pointer;
+	border: none;
+	padding: 1rem;
+	border-radius: .5rem;
+}
 
 //media screen globals
-@media screen and (min-width: $width-1)
+$media-query-968: 968px;
+$media-query-767: 767px;
+
+@media screen and (min-width: $media-query-968)
 {
 	:root
 	{
@@ -156,7 +164,7 @@ $width-2: 767px;
 }
 
 //nav-menu
-@media screen and (max-width: $width-2)
+@media screen and (max-width: $media-query-767)
 {
 	.nav-menu
 	{

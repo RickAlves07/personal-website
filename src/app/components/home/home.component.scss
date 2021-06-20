@@ -17,3 +17,24 @@
 		transform: rotate(-360deg);
 	}
 }
+
+.button
+{
+	display: inline-flex;
+	background-color: var(--first-color);
+	font-weight: var(--font-medium);
+	color: #fff;
+	align-items: center;
+}
+
+.button:hover
+{
+	background-color: var(--first-color-alt);
+}
+
+.contact-icon
+{
+	font-size: var(	--h2-font-size);
+	margin-left: .5rem;
+	transition: .3s;
+}
