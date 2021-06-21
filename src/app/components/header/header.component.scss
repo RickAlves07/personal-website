@@ -18,18 +18,36 @@ header
 }
 
 .nav-title,
+.nav-lang,
 .nav-toggle
 {
 	color: var(--title-color);
 	font-weight: var(--font-semi-bold);
 }
 
+.nav-buttons
+{
+	display: flex;
+}
+
+.nav-buttons div
+{
+	margin-right: .5rem;
+}
+
+.nav-buttons div:last-child
+{
+	margin-right: 0;
+}
+
+.nav-lang,
 .nav-toggle
 {
 	cursor: pointer;
 	font-size: 1.1rem;
 }
 
+.nav-lang:hover,
 .nav-toggle:hover,
 .nav-title:hover
 {
@@ -55,11 +73,6 @@ header
 .nav-menu .nav-item:hover
 {
 	color: var(--first-color);
-}
-
-.uil //header icons
-{
-	font-size: 1.2rem;
 }
 
 .nav-close
