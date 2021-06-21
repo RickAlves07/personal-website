@@ -6,6 +6,7 @@
 	//body
 	--body-font: 'Nunito', sans-serif;
 	--body-container: 83.333333%;
+	--border-radius-default: .7rem;
 
 	//header
 	--header-height: 3rem;
@@ -41,7 +42,6 @@
 	--font-medium: 600;
 	--font-semi-bold: 700;
 
-
 	//z-index
 	--z-index-tooltip: 10;
 	--z-index-fixed: 100;
@@ -76,6 +76,11 @@ h1, h2, h3, h4
 	font-weight: var(--font-semi-bold);
 }
 
+.uil //icons
+{
+	font-size: 1.5rem;
+}
+
 .section
 {
 	padding: 2rem 0 4rem;
@@ -98,9 +103,16 @@ h1, h2, h3, h4
 {
 	text-align: center;
 }
+
+.hidden
+{
+	width: 0px;
+	height: 0px;
+	position: absolute;
+}
 // END - config
 
-// reset default styles html
+// INIT - reset default styles html
 *
 {
 	box-sizing: border-box;
@@ -142,10 +154,11 @@ button
 	cursor: pointer;
 	border: none;
 	padding: 1rem;
-	border-radius: .5rem;
+	border-radius: var(--border-radius-default);
 }
+// END - reset default styles html
 
-//media screen globals
+// INIT - media screen globals
 $media-query-968: 968px;
 $media-query-767: 767px;
 
@@ -175,11 +188,13 @@ $media-query-767: 767px;
 		background-color: var(--body-color);
 		padding: 2rem 1.5rem 4rem;
 		box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
-		border-radius: 1.5rem 1.5rem 0 0;
+		border-radius: var(--border-radius-default) var(--border-radius-default) 0 0;
 		transition: .3s;
 	}
 }
+// END - media screen globals
 
+// INIT - masks
 #mask-pic
 {
 	clip-path: url(#svg-mask-hexagon);
@@ -191,17 +206,13 @@ $media-query-767: 767px;
 	height: 342.62px;
 	animation: spinMask 30s linear infinite;
 }
+// END - masks
 
+// INIT - global animations
 @keyframes spinMask
 { 100%
 	{
 		transform: rotate(360deg);
 	}
 }
-
-.hidden
-{
-	width: 0px;
-	height: 0px;
-	position: absolute;
-}
+// END - global animations

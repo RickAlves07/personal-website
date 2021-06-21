@@ -1,9 +1,18 @@
+.home-content
+{
+	grid-template-columns: .5fr	3fr;
+	grid-template-rows: repeat(2fr);
+	padding-top: 3.5rem;
+	align-items: center;
+}
+
 .home-photo
 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
+
 .img-profile
 {
 	padding-top: 3.6em;
@@ -11,12 +20,47 @@
 	animation: spinPhoto 30s linear infinite;
 }
 
-@keyframes spinPhoto
-{ 100%
-	{
-		transform: rotate(-360deg);
-	}
+.home-data
+{
+	grid-column: 1/3;
 }
+
+.home-social
+{
+	display: grid;
+	grid-template-columns: max-content;
+	row-gap: 1rem;
+}
+
+.home-social .uil
+{
+	color: var(--first-color);
+}
+
+.home-social .uil:hover
+{
+	color: var(--first-color-alt);
+}
+
+.home-title
+{
+	font-size: var(--big-font-size);
+}
+
+.home-subtitle
+{
+	font-size: var(--h3-font-size);
+	color: var(--text-color);
+	font-weight: var(--font-medium);
+	margin-bottom: 0.75rem;
+}
+
+.home-text
+{
+margin-bottom: 2rem;
+}
+
+
 
 .button
 {
@@ -38,3 +82,12 @@
 	margin-left: .5rem;
 	transition: .3s;
 }
+
+// INIT - Keyframes
+@keyframes spinPhoto
+{ 100%
+	{
+		transform: rotate(-360deg);
+	}
+}
+// END - Keyframes
