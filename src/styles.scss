@@ -6,7 +6,9 @@
 	//body
 	--body-font: 'Nunito', sans-serif;
 	--body-container: 83.333333%;
-	--border-radius-default: .7rem;
+	--max-body-container: 1600px;
+	--border-radius-default: .5rem;
+	--body-frame: 8.3333335%;
 
 	//header
 	--header-height: 3rem;
@@ -53,9 +55,12 @@ body
 {
 	font-family: var(--body-font);
 	font-size: var(--normal-font-size);
-	background-color: var(--body-color);
+	// background-color: var(--body-color);
+	background-color: rgb(255, 226, 226);
 	color: var(--text-color);
-	margin: 0 0 var(--header-height) 0;
+	width: var(--body-container);
+	max-width: var(--max-body-container);
+	margin: 0 var(--body-frame);
 }
 
 .container
@@ -83,7 +88,12 @@ h1, h2, h3, h4
 
 .section
 {
-	padding: 2rem 0 4rem;
+	background-color: rgb(184, 184, 255);
+	padding: var(--body-frame) 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 
 .section-title
@@ -104,7 +114,7 @@ h1, h2, h3, h4
 	text-align: center;
 }
 
-.hidden
+.hidden svg
 {
 	width: 0px;
 	height: 0px;
@@ -202,8 +212,10 @@ $media-query-767: 767px;
 	background-color: var(--first-color);
 	display: flex;
 	align-items: center;
-	width: 300px;
-	height: 342.62px;
+	max-width: 300px;
+	max-height: 342.62px;
+	min-width: 200px;
+	min-height: 242.62px;
 	animation: spinMask 30s linear infinite;
 }
 // END - masks
