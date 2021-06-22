@@ -49,7 +49,9 @@ header
 
 .nav-lang:hover,
 .nav-toggle:hover,
-.nav-title:hover
+.nav-title:hover,
+.nav-item:hover,
+.nav-item.active
 {
 	color: var(--first-color);
 }
@@ -68,11 +70,6 @@ header
 	font-size: var(--small-font-size);
 	color: var(--title-color);
 	font-weight: var(--font-medium);
-}
-
-.nav-menu .nav-item:hover
-{
-	color: var(--first-color);
 }
 
 .nav-close
