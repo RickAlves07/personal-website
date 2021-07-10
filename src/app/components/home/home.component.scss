@@ -1,8 +1,17 @@
+.home
+{
+	display: flex;
+	align-items: center;
+}
+
 .home-content
 {
+	display: grid;
 	grid-template-columns: .5fr	3fr;
 	grid-template-rows: repeat(2fr);
 	align-items: center;
+	overflow: hidden;
+	width: 100%;
 }
 
 .home-photo
@@ -27,7 +36,6 @@
 .home-social
 {
 	display: grid;
-	grid-template-columns: max-content;
 	row-gap: 1rem;
 }
 
@@ -44,6 +52,20 @@
 .home-title
 {
 	font-size: var(--big-font-size);
+	display: flex;
+	align-items: center;
+}
+
+.home-title:before
+{
+	content: '<';
+	color: var(--first-color-alt);
+}
+
+.home-title:after
+{
+	content: '/>';
+	color: var(--first-color-alt);
 }
 
 .home-subtitle
